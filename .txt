@@ -4,3 +4,13 @@ ZOHO_CLIENT_ID=
 ZOHO_CLIENT_SECRET=
 ZOHO_REDIRECT_URL=
 ZOHO_USER_EMAIL=
+
+
+First_Name: lead.First_Name,
+Last_Name: lead.Last_Name,
+Email: lead.Email,
+Phone: lead.Phone,
+City: lead.City,
+State: lead.State,
+Amount_of_Gov_t_Debt: lead.Amount_of_Gov_t_Debt,
+Keyword_Phrases: lead.Keyword_Phrases

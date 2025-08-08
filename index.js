@@ -24,9 +24,12 @@ app.use((req, res, next) => {
     next();
 });
 
+// Test Node app working
+app.get('/', (req, res) => res.send('Node app is working!'));
+
 app.use('/api', route);
 
-app.get('/', (req, res) => {
+app.get('/auth', (req, res) => {
     // Start OAuth2.0 flow
     const client_id = process.env.ZOHO_CLIENT_ID;
     const redirect_uri = process.env.ZOHO_REDIRECT_URL;

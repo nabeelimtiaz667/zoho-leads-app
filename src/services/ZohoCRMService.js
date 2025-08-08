@@ -6,20 +6,14 @@ class ZohoCRMService {
         try {
             const accessToken = await ZohoOauthController.getValidAccessToken();
             console.log('Using access token:', accessToken);
-            const leadPayload = {
-                data: [
-                    {
-                        First_Name: leadData.First_Name,
-                        Last_Name: leadData.Last_Name,
-                        Email: leadData.Email,
-                        Description: leadData.Description,
-                        Phone: leadData.Phone,
-                        City: leadData.City,
-                        State: leadData.State
-                    }
-                ]
-            };
+
+            const leadPayload = leadData.data;
             console.log('Sending lead payload:', leadPayload);
+            // For now return data as promise
+            // const response = await new Promise((resolve) => {
+            //     resolve(leadPayload);
+            // });
+            // return response;
             const response = await axios.post(
                 'https://www.zohoapis.com/crm/v8/Leads',
                 leadPayload,
